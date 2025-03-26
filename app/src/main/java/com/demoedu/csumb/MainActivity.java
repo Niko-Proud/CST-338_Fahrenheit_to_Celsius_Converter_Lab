@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(view);
 
-        binding.FtoCTextView.setText("WOW IT WORKED!");
+        binding.FtoCTextView.setText("WOW IT STILL WORKS!");
     }
 }
