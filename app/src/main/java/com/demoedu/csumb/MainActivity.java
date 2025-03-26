@@ -10,17 +10,18 @@ import com.demoedu.csumb.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+
         View view = binding.getRoot();
+
         setContentView(view);
 
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding.FtoCTextView.setText("WOW IT WORKED!");
     }
 }
