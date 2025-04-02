@@ -22,6 +22,22 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(view);
 
-        binding.FtoCTextView.setText("WOW IT STILL WORKS!");
+        binding.CtoFConvertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                convertValueFromDisplay();
+            }
+        });
+    }
+
+    private void convertValueFromDisplay() {
+        double celsiusValue = 0.0;
+        String enteredValue = binding.CtoFEnteredValueEditText.getText().toString();
+
+        if(!enteredValue.isEmpty()){
+            celsiusValue = Double.parseDouble(enteredValue);
+        }
+        double fahrenheitValue = Utils.ctof(celsiusValue);
+        binding.CtoFConvertedValueTextView.setText(fahrenheitValue + "");
     }
 }
